@@ -3,7 +3,6 @@
     <meta charset="UTF-8" />
     <title>Test Landing</title>
     <script>
-      // Функція отримання параметра з URL
       function getQueryParam(name) {
         return new URLSearchParams(window.location.search).get(name);
       }
@@ -13,7 +12,6 @@
   <body>
     <h1>hello test</h1>
 
-    <!-- Кнопка переходу -->
     <a id="go" href="#">Go to Offer</a>
 
     <script>
@@ -24,7 +22,6 @@
           alert("Click ID not found!");
           return;
         }
-        // Правильний редірект для Binom v2
         window.location.href = "http://3.138.123.234/go/" + clickId;
       };
     </script>
