@@ -1,4 +1,32 @@
 <html>
-  <head></head>
-  <body>hello test</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Landing</title>
+    <script>
+      // Функція отримання параметра з URL
+      function getQueryParam(name) {
+        return new URLSearchParams(window.location.search).get(name);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>hello test</h1>
+
+    <!-- Кнопка переходу -->
+    <a id="go" href="#">Go to Offer</a>
+
+    <script>
+      const clickId = getQueryParam("binom_click_id");
+
+      document.getElementById("go").onclick = () => {
+        if (!clickId) {
+          alert("Click ID not found!");
+          return;
+        }
+        // Правильний редірект для Binom v2
+        window.location.href = "http://3.138.123.234/go/" + clickId;
+      };
+    </script>
+  </body>
 </html>
